@@ -97,11 +97,13 @@
 
 .content {
   width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
 
+  text-align: left;
   /*
   width: calc(99% - 1em);
 */
-  padding: 1em;
   border: 1px solid black;
 
   display: flex;
@@ -111,22 +113,38 @@
   gap: 1em;
 }
 
-.content__center {
-  text-align: left;
-  flex: auto;
-  border: 1px solid blue;
+.content__center,
+.content__left,
+.content__right {
+  width: 49%;
+  border: 1px solid gold;
+  /*
+  */
+  flex-grow: 1;
 }
 
-.content__center h2 {
+.content__center {
+  flex-basis: 100%;
+}
+
+.content__left {
+  flex-basis: 20%;
+}
+
+.content__right {
+  flex-basis: 50%;
+}
+
+.content h2 {
+  padding: 1em 0;
   text-align: center;
   font-size: 1.5em;
 }
 
-.content__left,
-.content__right {
-  text-align: center;
-  border: 1px solid gold;
-  flex: auto;
+.content h3 {
+  padding: 1em 0;
+  text-align: left;
+  font-size: 1.3em;
 }
 
 .footer {
